@@ -37,7 +37,4 @@ __pycache__/
 ckpt_export_commads.txt
 
 
-app/src/indexer.py
-app/src/rag.py
-app/examples
 
