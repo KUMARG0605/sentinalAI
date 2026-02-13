@@ -1,0 +1,43 @@
+# Cloned repositories (in resources/)
+resources/piper
+piper
+poppler/
+poppler-*/
+piper_training_data/
+voice_cloning/
+rust-testing/
+
+# Large model/data folders (in resources/)
+resources/models/
+resources/faiss_index/
+resources/data/
+resources/piper_models/
+resources/vosk_models/
+
+# Environment files
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE settings
+.vscode/
+.idea/
+*.md
+# Misc
+ckpt_export_commads.txt
+
+
+app/src/indexer.py
+app/src/rag.py
+app/examples
+
