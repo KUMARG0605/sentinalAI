@@ -1,2 +1,1 @@
 "# SentinalAI Mini Project " 
-
