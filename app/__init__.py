@@ -1,1 +1,2 @@
-"""SentinelAI Application Package."""
+# SentinelAI desktop UI package
+
