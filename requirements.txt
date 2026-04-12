@@ -1,23 +1,85 @@
-langchain==0.3.26
-langchain_community==0.3.26
-langgraph==0.5.0
-langchain_core==0.3.68
-pydantic==2.12.5
-langchain_huggingface==0.3.0
-opencv-python==4.12.0.88
-sounddevice
-llama-cpp-python
-faiss-cpu
-sentence-transformers
-pytesseract
-Pillow
-unstructured
-python-docx
-python-pptx
-pdfminer.six
-pdf2image
-huggingface-hub
-unstructured[docx]
-unstructured[pptx]
-vosk
-sounddevice
+# ═══════════════════════════════════════════════════════════════════════════
+#  SentinelAI v2 — Requirements
+#  Install:  pip install -r requirements.txt
+#  Conda env: conda activate agents
+# ═══════════════════════════════════════════════════════════════════════════
+PyQt5
+# ── LLM Providers ─────────────────────────────────────────────────────────
+groq>=0.8.0
+langchain-groq>=0.1.9
+langchain-sambanova>=0.1.0          # optional: SambaNova fallback provider
+
+# ── LangChain Core ────────────────────────────────────────────────────────
+langchain>=0.2.0
+langchain-core>=0.2.0
+langchain-community>=0.2.0
+langchain-text-splitters>=0.2.0
+langchain-huggingface>=0.0.3
+
+# ── Browser Automation ────────────────────────────────────────────────────
+playwright>=1.40.0                   # CDP-based real browser control
+
+# ── Speech & Audio ────────────────────────────────────────────────────────
+assemblyai>=0.28.0                   # Streaming STT (AssemblyAI SDK v3)
+vosk>=0.3.45                         # Offline wake word detection model
+sounddevice>=0.4.6                   # Microphone audio streaming
+# webrtcvad>=2.0.10                    # Voice activity detection for wake word
+webrtcvad-wheels
+numpy>=1.24.0                        # Audio buffer processing
+
+# ── Vision & OCR (for Index Scan) ─────────────────────────────────────────
+torch>=2.0.0                         # Embedding model inference
+Pillow>=10.0.0                       # Image loading/processing
+pytesseract>=0.3.10                  # OCR on screenshots/PDFs
+opencv-python>=4.8.0                 # Image preprocessing for OCR
+pdf2image>=1.16.3                    # PDF page rendering for indexer
+
+# ── Vector Store & Embeddings ─────────────────────────────────────────────
+faiss-cpu>=1.7.4                     # FAISS vector index (CPU)
+sentence-transformers>=2.7.0         # all-MiniLM-L6-v2 embedding model
+
+# ── Web Search & Research ─────────────────────────────────────────────────
+ddgs>=6.0.0                          # DuckDuckGo search (renamed from duckduckgo-search)
+tavily-python>=0.3.0                 # Tavily AI search (optional, needs API key)
+wikipedia>=1.4.0                     # Wikipedia article lookup
+arxiv>=2.1.0                         # ArXiv research paper search
+
+# ── Windows Automation ────────────────────────────────────────────────────
+pyautogui>=0.9.54                    # Screen automation, screenshots
+pywinauto>=0.6.8                     # Window control, button clicking, typing
+pyperclip>=1.8.2                     # Clipboard read/write
+
+# ── Utilities ─────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0                 # .env file loading
+requests>=2.31.0                     # HTTP client
+
+# ── Communications Agents ─────────────────────────────────────────────────
+# (WhatsApp / Telegram use browser automation via playwright — no extra deps)
+
+# ── Optional: better Excel support ───────────────────────────────────────
+openpyxl>=3.1.0                      # Excel read/write (for file_agent)
+xlrd>=2.0.1                          # Legacy .xls reading
+
+# ═══════════════════════════════════════════════════════════════════════════
+#  POST-INSTALL STEPS
+#
+#  1. Install Playwright browsers:
+#       python -m playwright install chromium
+#
+#  2. Download Vosk model for wake word (offline):
+#       Place in: resources/vosk_models/vosk-model-en-in-0.5/
+#       Download: https://alphacephei.com/vosk/models
+#       Recommended: vosk-model-en-in-0.5 (~40MB, Indian English)
+#
+#  3. Copy resources/ folder to project root:
+#       resources/
+#         piper_models/piper.exe     ← TTS engine
+#         piper_models/models/...    ← voice model files
+#         vosk_models/...            ← offline wake word model
+#
+#  4. Set API keys in .env:
+#       GROQ_API_KEY=gsk_...
+#       ASSEMBLYAI_API_KEY=...
+#       TAVILY_API_KEY=...           (optional)
+#       SAMBANOVA_API_KEY=...        (optional fallback)
+# ═══════════════════════════════════════════════════════════════════════════

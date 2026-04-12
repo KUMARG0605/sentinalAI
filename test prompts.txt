@@ -1,0 +1,60 @@
+ Browser Agent Test Prompts
+Job Search
+
+Search for python developer jobs in Bangalore on Naukri and list the first 10 job titles with company names
+Go to LinkedIn jobs and find data analyst jobs in Hyderabad, show me the first 5 results
+Search for machine learning engineer jobs in Chennai on Indeed India and show job titles, company, and location
+
+E-Commerce
+
+Go to Amazon India and search for wireless mouse under 500 rupees, list the first 5 products with prices
+Search for laptop on Flipkart and show me the first 5 results with their prices
+Find boAt earphones on Amazon India and list the top 5 with price and rating
+
+Web Search & Info
+
+Search Google for the current Python version and tell me what it is
+Go to YouTube and search for machine learning tutorial and list the first 5 video titles
+Search DuckDuckGo for top 5 programming languages in 2024 and summarize the results
+
+Reading & Extracting
+
+Open https://news.ycombinator.com and list the top 10 story titles with their links
+Go to https://github.com/trending and list the top 5 trending repositories today
+Open https://www.timesjobs.com and search for data scientist jobs in Mumbai, list the first 5
+
+
+ Desktop Agent Test Prompts
+Notepad / Text
+
+Open Notepad, type "Hello World - SentinelAI Test" and save it as test.txt on the Desktop
+Open Notepad, write today's date and time, and save it as daily_log.txt on the Desktop
+Open Notepad and type a simple Python hello world program, then save it as hello.py on the Desktop
+
+Calculator
+
+Open the Windows Calculator, calculate 1250 multiplied by 18, and tell me the result
+Open Calculator, switch to Scientific mode, and calculate the square root of 144
+
+File & Folder
+
+Create a folder called "SentinelTest" on the Desktop using the command line
+Create a text file called notes.txt inside the SentinelTest folder on the Desktop with the text "Agent test successful"
+List all files on the Desktop and tell me how many there are
+
+System Info
+
+Open Command Prompt, run the command to show the current IP address, and tell me what it is
+Open PowerShell and run a command to show the Python version installed on this system
+Check how much free disk space is available on the C drive using the command line
+
+App Control
+
+Open Google Chrome, navigate to google.com, and take a screenshot
+Open File Explorer, navigate to the Downloads folder, and list the files inside
+
+
+
+
+ give the list of nothing 4a mobiles with prices,storage and ram
+ give the list of all iphone 17 mobiles with price,colour,storage and ram

@@ -1,0 +1,53 @@
+Building agent...
+Invoking agent...
+
+--- ERROR TRACEBACK ---
+Traceback (most recent call last):
+  File "C:\Users\nchar\Downloads\sentinel_v2_final\test_crash.py", line 17, in <module>
+    result = agent.invoke({"input": "buy iphone on flipkart", "chat_history": []})
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain\chains\base.py", line 167, in invoke
+    raise e
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain\chains\base.py", line 157, in invoke
+    self._call(inputs, run_manager=run_manager)
+  File "C:\Users\nchar\Downloads\sentinel_v2_final\app\src\agents\ecommerce_agent.py", line 969, in _call
+    result = super()._call(inputs, run_manager=run_manager)
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain\agents\agent.py", line 1620, in _call
+    next_step_output = self._take_next_step(
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain\agents\agent.py", line 1326, in _take_next_step
+    [
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain\agents\agent.py", line 1326, in <listcomp>
+    [
+  File "C:\Users\nchar\Downloads\sentinel_v2_final\app\src\agents\ecommerce_agent.py", line 1028, in _iter_next_step
+    for step in super()._iter_next_step(*args, **kwargs):
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain\agents\agent.py", line 1354, in _iter_next_step
+    output = self._action_agent.plan(
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain\agents\agent.py", line 577, in plan
+    for chunk in self.runnable.stream(inputs, config={"callbacks": callbacks}):
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain_core\runnables\base.py", line 3438, in stream
+    yield from self.transform(iter([input]), config, **kwargs)
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain_core\runnables\base.py", line 3424, in transform
+    yield from self._transform_stream_with_config(
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain_core\runnables\base.py", line 2215, in _transform_stream_with_config
+    chunk: Output = context.run(next, iterator)
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain_core\runnables\base.py", line 3386, in _transform
+    yield from final_pipeline
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain_core\runnables\base.py", line 1447, in transform
+    yield from self.stream(final, config, **kwargs)
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain_core\runnables\base.py", line 1014, in stream
+    yield self.invoke(input, config, **kwargs)
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain_core\output_parsers\base.py", line 196, in invoke
+    return self._call_with_config(
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain_core\runnables\base.py", line 1940, in _call_with_config
+    context.run(
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain_core\output_parsers\base.py", line 197, in <lambda>
+    lambda inner_input: self.parse_result(
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain\agents\output_parsers\tools.py", line 99, in parse_result
+    return parse_ai_message_to_tool_action(message)
+  File "C:\Users\nchar\anaconda3\envs\agents\lib\site-packages\langchain\agents\output_parsers\tools.py", line 61, in parse_ai_message_to_tool_action
+    if "__arg1" in _tool_input:
+TypeError: argument of type 'NoneType' is not iterable
+
+-----------------------
+
